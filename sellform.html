@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Sell form</title>
+<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+<h3><center>Sell Form</center></h3>
+<center>
+<div class="form">
+ <form id="registration">
+   <input type="text" name="cname" id="button" placeholder="enter car name" required><br>
+   <br>
+   <input type="text" name="tname" id="button" placeholder="enter car type" required><br>
+   <br>
+   <input type="text" name="lspname" id="button" placeholder="enter life-span of car" required><br>
+   <br>
+   <input type="text" name="compname" id="button" placeholder="enter company name" required><br>
+   <br>
+   &emsp;&emsp;&emsp;&emsp;&emsp;<input type="label" id="button1" placeholder="car-image:" size="5px" disabled>
+   <input type="file" id="fl" name="myFile">
+   <br>
+   &emsp;&emsp;&emsp;&emsp;&emsp;<input type="label" id="button1" placeholder="back-side:" size="5px" disabled>
+   <input type="file" id="fl" name="myFile">
+   <br>
+   &emsp;&emsp;&emsp;&emsp;&emsp;<input type="label" id="button1" placeholder="interior:" size="5px" disabled>
+   <input type="file" id="fl" name="myFile">
+   <br>
+   &emsp;&emsp;&emsp;&emsp;&emsp;<input type="label" id="button1" placeholder="head lamp:" size="5px" disabled>
+   <input type="file" id="fl" name="myFile">
+   <br><br>
+
+   <script src="jquery3.js"></script>
+   <script>
+   $(".btn").bind("click", function(){
+      $("myFile").click()});
+	</script>
+
+   <input type="text" name="mileage" id="button" placeholder="enter mileage" required><br>
+   <br>
+   <input type="text" name="engine" id="button" placeholder="enter engine status" required><br>
+   <br>
+   <input type="text" name="bhp" id="button" placeholder="enter bhp of car" required><br>
+   <br>
+   <input type="text" name="transmission" id="button" placeholder="enter car transmission" required><br>
+   <br>
+   <input type="text" name="seat" id="button" placeholder="enter car seats" required><br>
+   <br>
+   <input type="text" name="servcost" id="button" placeholder="enter service_cost" required><br>
+   <br>
+   <input type="submit" value="submit" id="butt">
+  </form>
+</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<html>
+
+<head>
+	<title>Apply for Servicing</title>
+	<style>
+	
+	body{
+	text-align: center;
+	background-image: url("backgg.jpg");
+	background-size: 120%;
+	}
+
+	button{
+	background-color:#000;
+	border:none;
+	color:white;
+	padding:15px 30px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	}
+
+	button:hover{
+	cursor: pointer;
+	background: gray;
+	color: #000;
+	}
+	
+	
+	h1{
+	font-family:sans-serif;
+	font-size:50px;
+	text-align:center;
+	}
+	</style>
+</head>
+
+<body>
+		<br>
+	<h1>Apply for a Service</h1>
+<form method="post" action="service.php">
+	
+	<br>
+	<table align="center" cellpadding="6" cellspacing="10">	
+	<tr>
+	<td>Company Name:</td>
+	<td><input type="text" name="comname" required /></td>
+	</tr>
+	
+	<tr>
+	<td>Car Name:</td>
+	<td><input type="text" name="carname" required /></td>
+	</tr>
+	
+	<tr>
+	<td>Change Oils?</td>
+	<td><select name="oil">
+	<option selected hidden value="">Select</option>
+	<option>Yes</option>
+	<option>No</option>
+	</select></td>
+	</tr>
+	
+	<tr>
+	<td>Type of Wash</td>
+	<td><select name="washtype">
+	<option selected hidden value="">Select</option>
+	<option>Normal</option>
+	<option>Advanced</option>
+	</select></td>
+	</tr>
+	
+	<tr>
+	<td>Any other Faults:</td>
+	<td><input type="text" name="anfault" required /></td>
+	</tr>
+	
+	</table>
+	
+	<br>
+	<center><button type="submit">Apply</button></center>
+</form>
+</body>
+
+</html>
