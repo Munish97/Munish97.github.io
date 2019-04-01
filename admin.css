@@ -1,0 +1,36 @@
+body{
+		background-image:linear-gradient(rgba(0,0,0,0.0) , rgba(0,0,0,0.0)),url("backgg.jpg");
+		background-size:120%;
+		text-align:center;
+		background-attachment: fixed;
+		}
+		td{
+			margin-left: 10px;
+		background-color:black;
+		border:none;
+		color:white;
+		width:200px;
+		padding:12px 28px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 32px;
+        white-space:nowrap;
+		}
+
+		td:hover{
+		background-color:gray;
+		}
+
+		h1{
+		padding-top:50px;
+		font-size:50px;
+		font-family:sans-serif;
+    		color:Black;
+		}
+
+		a{
+		color:white;
+		text-decoration:none;
+		text-align:center;
+		}

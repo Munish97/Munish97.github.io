@@ -1,0 +1,99 @@
+<html>
+
+<head>
+<title>Add Car</title>
+<link rel="stylesheet" href="addcar.css" type="text/css">
+<script src="javaScript/addcar.js"></script>
+</head>
+<body>
+  <?php include_once "newnav.php" ?>
+<br><br><br><br><br>
+<center><h1>Insert a New Car</h1></center>
+
+<form name="Form" onsubmit="return Validate(Form)" action="admin.html" method="post" enctype="multipart/form-data" id="registration">
+<table align="center">
+
+<tr>
+	<td>Car name:</td>
+	<td><input type="text" name="cname"></td>
+</tr>
+<tr>
+	<td>Car type:</td>
+	<td><select name="tname">
+	<option value="SUV">SUV</option>
+	<option value="Sedan">Sedan</option>
+	<option value="Hatchback">Hatchback</option>
+	<option value="Compact SUV">Compact SUV</option>
+	</select>
+	<td>
+</tr>
+
+<tr>
+	<td>Company name:</td>
+	<td><input type="text" name="compname"></td>
+</tr>
+<tr>
+	<td>Price:</td>
+	<td><input type="text" name="price"></td>
+</tr>
+<tr>
+	<td>&emsp;&emsp;<input type="text" name="caption0" id="button1" placeholder="CAP0"  size="5px"></td>
+   <td>&emsp;&emsp;&emsp;&emsp;&emsp;<input type="file" required name="carimage" size=20 id="fl"><div id="err"><?php echo "*".$carError; ?></div></td>
+
+   <td><input type="text" name="caption1" id="button1" placeholder="CAP1"  size="5px"></td>
+   <td>&emsp;&emsp;&emsp;&emsp;&emsp;<input type="file" required id="fl" name="backside"><div id="err"><?php echo "*".$backError;?></div></td>
+
+   <td><input type="text" id="button1" name="caption2" placeholder="CAP2"  size="5px" ></td>
+   <td>&emsp;&emsp;&emsp;&emsp;&emsp;<input type="file" required id="fl" name="interior"><div id="err"><?php echo "*".$interiorError;?></div></td>
+
+   <td><input type="text" name="caption3" id="button1" placeholder="CAP3"  size="5px"></td>
+   <td>&emsp;&emsp;&emsp;&emsp;&emsp;<input type="file" required id="fl" name="headlamp"><div id="err"><?php echo "*".$headError;?></div></td>
+</tr>
+<tr>
+	<td>Mileage:</td>
+	<td><input type="text" name="mileage"></td>
+</tr>
+<tr>
+	<td>CC count:</td>
+	<td><input type="text" name="engine"></td>
+</tr>
+<tr>
+	<td>Bhp rating:</td>
+	<td><input type="text" name="bhp"></td>
+</tr>
+<tr>
+	<td>Transmission:</td>
+	<td><select name="transmission">
+	<option value="Manual">Manual</option>
+	<option value="Automatic">Automatic</option>
+	</select>
+	<td>
+</tr>
+<tr>
+	<td>No of seats:</td>
+	<td><select name="seat">
+	<option value="4">4</option>
+	<option value="5">5</option>
+	<option value="6">6</option>
+	<option value="7">7</option>
+	</select>
+	<td>
+</tr>
+<tr>
+	<td>Service cost:</td>
+	<td><input type="text" name="servcost"></td>
+</tr>
+
+
+
+</table>
+<br>
+<br>
+<center><button type="submit" value="Submit">Submit</button><br /><div style="color:white;">
+  <?php echo $success;?>
+</div></center>
+
+
+</form>
+</body>
+</html>

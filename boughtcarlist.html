@@ -1,0 +1,61 @@
+<html>
+
+<head>
+<title>Bought car</title>
+<link rel="stylesheet" href="boughtcarlist.css" type="text/css">
+<script src="javaScript/boughtcarlist.js"></script>
+</head>
+<body>
+  <?php include_once "newnav.php" ?>
+<br><br><br><br><br>
+<center><h1>BOUGHT CAR</h1></center>
+
+<form name="Form" onsubmit="return Validate(Form)" action="admin.html" method="post">
+<table align="center">
+
+<tr>
+	<td>Customer_name:</td>
+	<td><input type="text" name="custname"></td>
+</tr>
+<tr>
+	<td>Address:</td>
+	<td><input type="text" name="address"></td>
+</tr>
+<tr>
+	<td>Email:</td>
+	<td><input type="text" name="email"></td>
+</tr>
+<tr>
+	<td>Mobile NO:</td>
+	<td><input type="text" name="mobileno"></td>
+</tr>
+<tr>
+	<td>Car Name:</td>
+	<td><input type="text" name="cname"></td>
+</tr>
+<tr>
+	<td>License:</td>
+	<td><input type="text" name="License"></td>
+</tr>
+<tr>
+	<td>DownPayment Amount:</td>
+	<td><select name="downpayment amount">
+	<option value="4000">4000</option>
+	<option value="5000">5000</option>
+	<option value="6000">6000</option>
+	<option value="7000">7000</option>
+	</select>
+	<td>
+</tr>
+</table>
+<br>
+<br>
+<center><button type="delivered" value="Delivered">Delivered</button><br /><div style="color:white;">
+  <?php echo $success;?>
+</div></center>
+
+
+</form>
+</body>
+</html>
+

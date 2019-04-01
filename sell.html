@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>Sell Form</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+<style>#err{margin-left: 38%;color:white;}</style>
+<script src="javaScript/sell.js"></script>
+</head>
+
+<body>
+<h2><center>Sell for Cars</center></h2>
+<center>
+<div class="form">
+ <form name="Form" onsubmit="return Validate(Form);" action="index.html" method="post">
+   <input type="text" name="cname" id="button" placeholder="Enter car name" required><br>
+   <br>
+   <input type="text" name="tname" id="button" placeholder="Enter car type" required><br>
+   <br>
+   <input type="text" name="lspname" id="button" placeholder="Enter life-span of car" required><br>
+   <br>
+   <input type="text" name="compname" id="button" placeholder="Enter company name" required><br>
+   <br>
+   <input type="text" name="price" id="button" placeholder="Enter selling Price in Lakhs" required><br>
+   <br>
+   <input type="text" id="button1" name="caption0"  placeholder="CAP0" size="15px">
+   <input type="file" required name="carimage" size=20 id="fl" style="color:white;"><br /><div id="err"><?php echo "*".$carError;?></div>
+
+   <input type="text" name="caption1"  placeholder="CAP1" id="button1"  size="15px">
+   <input type="file" required id="fl" name="backside" style="color:white;"><br /><div id="err"><?php echo "*".$backError;?></div>
+
+   <input type="text" id="button1" name="caption2"  placeholder="CAP2" size="15px">
+   <input type="file" required id="fl" name="interior" style="color:white;"><br /><div id="err"><?php echo "*".$interiorError;?></div>
+
+   <input type="text" id="button1" name="caption3"  placeholder="CAP3" size="15px">
+   <input type="file" required id="fl" name="headlamp" style="color:white;"><br /><div id="err"><?php echo "*".$headlampError;?></div>
+
+   <script src="jquery3.js"></script>
+   <script>
+   $(".btn").bind("click", function(){
+      $("myFile").click()});
+	</script>
+    <br>
+   <input type="text" name="kms" id="button" placeholder="Enter kms driven" required><br>
+   <br>
+   <input type="text" name="mileage" id="button" placeholder="Enter mileage" required><br>
+   <br>
+   <input type="text" name="engine" id="button" placeholder="Enter engine status" required><br>
+   <br>
+   <input type="text" name="bhp" id="button" placeholder="Enter bhp of car" required><br>
+   <br>
+   <input type="text" name="transmission" id="button" placeholder="Enter car transmission" required><br>
+   <br>
+   <input type="text" name="seat" id="button" placeholder="Enter car seats" required><br>
+   <br>
+   <input type="text" name="servcost" id="button" placeholder="Enter service_cost" required><br>
+   <br>
+   <center><button type="submit">Submit</button></center>
+  </form>
+  </center>
+</div>
+
+</body>
+</html>
+<?php
+}
+?>

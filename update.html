@@ -1,0 +1,101 @@
+<html>
+<head>
+<title>getcarlist</title>
+<style>#err{		margin-left: 40%;color:white;}</style>
+</head>
+
+<script>
+
+var _validFileExtensions = [".jpg",".jpeg",".png"];
+function Validate(Form) {
+    var arrInputs = Form.getElementsByTagName("input");
+    for (var i = 0; i < arrInputs.length; i++) {
+        var oInput = arrInputs[i];
+        if (oInput.type == "file") {
+            var sFileName = oInput.value;
+            if (sFileName.length > 0) {
+                var blnValid = false;
+                for (var j = 0; j < _validFileExtensions.length; j++) {
+                    var sCurExtension = _validFileExtensions[j];
+                    if (sFileName.substr(sFileName.length - sCurExtension.length, sCurExtension.length).toLowerCase() == sCurExtension.toLowerCase()) {
+                        blnValid = true;
+                        break;
+                    }
+                }
+
+                if (!blnValid) {
+                    alert("Sorry, " + sFileName + " is invalid, allowed extensions are: " + _validFileExtensions.join(", "));
+                    return false;
+                }
+            }
+        }
+    }
+
+    return true;
+}
+function myedit(id)
+{//document.write("SAA");
+var ele=document.getElementById(id);
+ ele.disabled=false;
+}
+</script>
+<body>
+<?php include_once "newnav.php";?>
+<div class="form">
+  <br /><br /><br /><br /><br />
+ <form name="Form" onsubmit="return Validate(Form)" action="getcarlist.html" method="post">
+   <input type="text" name="cname" id="button"><br>
+   <br>
+   <input type="text" name="tname" id="button"><br>
+   <br>
+   <input type="text" name="compname" id="button"><br>
+   <br>
+   <input type="text" name="price"  id="price"<span onclick="myedit('price')" href="#">UPDATE</span><br>
+   <br>
+   <input type="text" id="button1" name="cap1" value="<?php $res->data_seek(0); $res_array=$res->fetch_array(MYSQLI_NUM); echo $res_array[0];?>" size="5px">
+   <input type="file" name="carimage" size=20 id="fl" style="color:white;"><br /><div id="err"><?php echo "*".$carError; ?></div>
+<?php $res->data_seek(1);
+      $res_array=$res->fetch_array(MYSQLI_NUM);?>
+
+    <input type="text" id="button1" name="cap2" value="<?php echo $res_array[0];?>" size="5px">
+    <input type="file" id="fl" name="backside" style="color:white;"><div id="err"><?php echo "*".$backError;?></div>
+    <?php $res->data_seek(2);
+          $res_array=$res->fetch_array(MYSQLI_NUM);?>
+
+    <input type="text" id="button1" name="cap3" value="<?php echo $res_array[0];?>" size="5px">
+    <input type="file" id="fl" name="interior" style="color:white;"><div id="err"><?php echo "*".$interiorError;?></div>
+    <?php $res->data_seek(3);
+          $res_array=$res->fetch_array(MYSQLI_NUM);?>
+
+  <input type="text" id="button1" name="cap4" value="<?php echo $res_array[0];?>" size="5px">
+    <input type="file" id="fl" name="headlamp" style="color:white;"><div id="err"><?php echo "*".$headlampError;?></div>
+
+   <script src="jquery3.js"></script>
+   <script>
+   $(".btn").bind("click", function(){
+      $("myFile").click()});
+	</script>
+  <?php
+      $query="select * from car_description where car_id=$car_id";
+      $result=$conn->query($query);
+      $result_array=$result->fetch_array(MYSQLI_NUM);
+
+   ?>
+   <input type="text" name="mileage" id="mileage" placeholder="Mileage=<?php echo $result_array[1];?>" disabled>&emsp;&emsp;<span onclick="myedit('mileage')" href="#">UPDATE</span><br>
+   <br>
+   <input type="text" name="engine" id="engine" placeholder="Engine=<?php echo $result_array[2];?>" disabled>&emsp;&emsp;<span onclick="myedit('engine')" href="#">UPDATE</span><br>
+   <br>
+   <input type="text" name="bhp" id="bhp" placeholder="bhp=<?php echo $result_array[3];?>" disabled>&emsp;&emsp;<span onclick="myedit('bhp')" href="#">UPDATE</span><br>
+   <br>
+   <input type="text" name="transmission" id="transmission" placeholder="transmission=<?php echo $result_array[4];?>" disabled>&emsp;&emsp;<span onclick="myedit('transmission')" href="#">UPDATE</span><br>
+   <br>
+   <input type="text" name="seat" id="seat" placeholder="seats=<?php echo $result_array[5];?>" disabled>&emsp;&emsp;<span onclick="myedit('seat')" href="#">UPDATE</span><br>
+   <br>
+   <input type="text" name="servcost" id="servcost" placeholder="service_cost=<?php echo $result_array[6];?>" disabled>&emsp;&emsp;<span onclick="myedit('servcost')" href="#">UPDATE</span><br>
+   <br>
+   <input type="submit" name="submit" value="submit" id="butt"><br /><div id="err"><?php echo "*".$error;?></div>
+  </form>
+</div>
+
+</body>
+</html>

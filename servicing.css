@@ -1,0 +1,26 @@
+    body{
+	text-align: center;
+	background-image:linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)), url("bad.jpg");
+	background-repeat: repeat;
+	background-size: 120%;
+	}
+    button{
+	background-color:#000;
+	border:none;
+	color:white;
+	padding:15px 30px;
+	text-align: center;
+	display: inline-block;
+	font-size: 20px;
+    }
+    button:hover{
+	cursor: pointer;
+	background: gray;
+	color: #000;
+	}
+	h1{
+	font-family:sans-serif;
+	font-size:50px;
+	text-align:center;
+	color:white;
+	}

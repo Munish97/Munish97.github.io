@@ -1,0 +1,40 @@
+
+<?php
+if(!isset($_SESSION)) session_start();
+$username=$password=$logerror="";
+if(isset($_POST["uname"])) $username=$_POST["uname"];
+if(isset($_POST["pass"]))$password=$_POST["pass"];
+if(isset($_SESSION['admin'])){header("Location: admin.php");}
+else if($username=='admin' && $password=='admin')
+{	echo "as";
+	$_SESSION['admin']="admin";
+	header("Location: admin..html");
+}
+if(($username!='admin' || $password!='admin') && $_SERVER['REQUEST_METHOD']=="POST"){$logerror="*Invalid id or password";}
+
+?>
+ <html>
+ <head>
+ 	<title>Login Page</title>
+ 	<link rel="stylesheet" type="text/css" href="css/adminlogin.css">
+ </head>
+ <body>
+	 <?php include_once "newnav.php";?>
+ <br /><br />
+ 	<div class="loginbox">
+ 	<img src="avatar.png" class="avatar" /><br /><br />
+ 	<h1>Admin Login</h1>
+ 	<form name="Form" onsubmit="return Validate(Form);" action="admin.html" method="post">
+ 		<p>Username</p>
+ 		<input type="text" name="uname" placeholder="Enter Username" />
+ 		<p>Password</p>
+ 		<input type="password" name="pass" placeholder="Enter Password" /><?php echo $logerror; ?>
+ 		<br>
+ 		<a href="admin.html"><input type="submit" name="ccc" value="Login" /></a>
+ 		 <button type="button" onclick="document.getElementById('id01').style.display='none'"class="cancelbtn">Forget password</button>
+ 	</form>
+ 	</div>
+
+
+ </body>
+ </html>

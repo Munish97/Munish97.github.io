@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>Apply for Servicing</title>
+	<link href="servicing.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+	<h1><center>Apply for a Service</center></h1>
+<form method="post" action="index.html">
+	
+	<br>
+	<table align="center" cellpadding="6" cellspacing="10">	
+	<tr>
+	<td>Company Name:</td>
+	<td><input type="text" name="comname" required /></td>
+	</tr>
+	<tr>
+	<td>Car Name:</td>
+	<td><input type="text" name="carname" required /></td>
+	</tr>
+	<tr>
+	<td>Change Oils?</td>
+	<td><select name="oil">
+	<option selected hidden value="">Select</option>
+	<option>Yes</option>
+	<option>No</option>
+	</select></td>
+	</tr>
+	<tr>
+	<td>Type of Wash</td>
+	<td><select name="washtype">
+	<option selected hidden value="">Select</option>
+	<option>Normal</option>
+	<option>Advanced</option>
+	</select></td>
+	</tr>
+	<tr>
+	<td>Any other Faults:</td>
+	<td><input type="text" name="anfault" required /></td>
+	</tr>
+	
+	</table>
+	
+	<br>
+	<center><button type="submit">Apply</button></center>
+</form>
+</body>
+</html>

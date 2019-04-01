@@ -1,0 +1,33 @@
+body{
+background-image:url("bad.jpg");
+background-size:120%;
+color: white;
+}
+
+td{
+font-size:20px;
+padding-bottom:5px;
+}
+
+h1{
+font-size:38px;
+font-family:sans-serif;
+}
+
+button{
+background-color:#000;
+border:none;
+color:white;
+padding:12px 28px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+}
+
+button:hover
+{
+	cursor: pointer;
+	background: gray;
+	color: #000;
+}

@@ -1,0 +1,52 @@
+body{
+	background-image:linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)),url("bad.jpg");
+	background-repeat:repeat;
+	background-size:120%;
+}
+h2{
+	font-family:Helvetica;
+	font-size:50px;
+	text-align:center;
+	margin-left:150px;
+	color:white;	
+}
+.form{
+	margin-left: 70%;
+	margin: 5px 400px;
+}
+#registration{
+	width:100%;
+	margin-left: 5%;
+	background-color:rgba(0,0,0,0.9);
+	opacity:0.9;
+	padding:50px 0px;
+}
+span{ cursor: pointer;color: blue;
+    background-color: transparent;
+    text-decoration: underline;}
+#button,#price,#mileage,#bhp,#transmission,#servcost,#engine,#seat,#phone,#address,#username{
+    margin-left: 30%;
+	padding:10px;
+	width:250px;
+	border-radius:5px;
+	outline:0px;
+}
+#button1{		
+    margin-left: 10%;
+	padding:10px;
+	width:100px;
+	border-radius:5px;
+	outline:0px;
+}
+#ph{margin-left: 10%;
+	padding:5px;
+	width:50px;
+	border-radius:5px;
+	outline:0px;
+}
+
+#but{
+	color:white;
+	font-size:18px;
+	padding:5px;
+}
